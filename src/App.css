@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+/* I IMPORT THE ROBOTO FONT*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* I APPLY BOX-SIZING TO EVERYTHING */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* I APPLY BOX-SIZING TO EVERYTHING */
+
+body {
+  font-family: "Roboto";
+  background: linear-gradient(
+    90deg,
+    rgba(22, 135, 144, 1) 0%,
+    rgba(16, 35, 40, 1) 100%
+  );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* EVERYTHING RELATED TO THE COUNTER  */
+.counterBody {
+  width: 50%;
+  height: 400px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.roundCount {
+  width: 150px;
+  height: 150px;
+  background-color: #499fa4;
+  border-radius: 50%;
+  margin: 0 auto;
+  -webkit-box-shadow: 5px 5px 17px 5px rgba(37, 62, 64, 1);
+  box-shadow: 5px 5px 17px 5px rgba(37, 62, 64, 1);
+}
+
+.placeRoundCount {
+  padding-top: 20px;
+}
+
+.fontRoundCount {
+  font-size: 80px;
+  padding-top: 40px;
+  padding-left: 0px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.incrementDecrementCount {
+  width: 90%;
+  height: 100px;
+  /* background-color: red; */
+  margin-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.buttonCounter {
+  height: 110px;
+  width: 110px;
+  background: linear-gradient(
+    90deg,
+    rgba(73, 159, 164, 1) 0%,
+    rgba(73, 159, 164, 1) 35%,
+    rgba(37, 62, 64, 1) 100%
+  );
+
+  -webkit-box-shadow: 5px 5px 17px 5px rgba(37, 62, 64, 1);
+  box-shadow: 5px 5px 17px 5px rgba(37, 62, 64, 1);
+
+  border-radius: 10% 34% 39% 34% / 0% 0% 41% 40%;
+  user-select: none;
+}
+
+.buttonCounter:hover {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.placeIncrementDecrementCount {
+  margin-top: 80px;
+}
+
+/* EVERYTHING RELATED TO THE COUNTER  */
+
+@keyframes myAnim {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+
+  25%,
+  75% {
+    opacity: 0.5;
   }
 }
